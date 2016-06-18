@@ -1,3 +1,3 @@
 defmodule Rumbl.User do
-  defstruct [:id, :name, :user, :password]
+  defstruct [:id, :name, :username, :password]
 end
