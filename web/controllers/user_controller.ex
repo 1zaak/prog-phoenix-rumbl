@@ -3,6 +3,13 @@ defmodule Rumbl.UserController do
   alias Rumbl.User
 
   def index(conn, _params)  do
+    case authenticate(conn) do
+       %Plug.Conn{halted: true} = conn ->
+        conn
+        conn ->
+          users = Repo.all(User)
+          render conn, "index.html", users: users
+    end
     users = Repo.all(Rumbl.User)
     render conn, "index.html", users: users
   end
