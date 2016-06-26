@@ -10,8 +10,6 @@ defmodule Rumbl.UserController do
           users = Repo.all(User)
           render conn, "index.html", users: users
     end
-    users = Repo.all(Rumbl.User)
-    render conn, "index.html", users: users
   end
 
   def show(conn, %{"id" => id}) do
