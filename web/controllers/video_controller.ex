@@ -74,4 +74,8 @@ defmodule Rumbl.VideoController do
     |> put_flash(:info, "Video deleted successfully.")
     |> redirect(to: video_path(conn, :index))
   end
+
+  defp user_videos(user) do
+   assoc(user, :videos)
+  end
 end
