@@ -12,6 +12,6 @@ defmodule Rumbl.Repo.Migrations.CreateCategory do
       add :category_id, references(:categories)
     end
 
-    create_unique_index(:categories, [:name])
+    create unique_index(:categories, [:name])
   end
 end
