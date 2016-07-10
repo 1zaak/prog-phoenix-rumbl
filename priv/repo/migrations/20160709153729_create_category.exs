@@ -8,10 +8,6 @@ defmodule Rumbl.Repo.Migrations.CreateCategory do
       timestamps
     end
 
-    alter table(:videos) do
-      add :category_id, references(:categories)
-    end
-
     create unique_index(:categories, [:name])
   end
 end
