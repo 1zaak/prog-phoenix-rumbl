@@ -10,12 +10,12 @@ defmodule Rumbl.TestHelpers do
 
       %Rumbl.User{}
       |> Rumbl.User.registration_changeset(changes)
-      |> Repo.insert
+      |> Repo.insert!()
   end
 
   def insert_video(user, attrs \\ %{}) do
     user
     |> Ecto.build_assoc(:videos, attrs)
-    |> Repo.insert
+    |> Repo.insert!()
   end
 end
