@@ -38,6 +38,6 @@ defmodule Rumbl.ConnCase do
       Ecto.Adapters.SQL.restart_test_transaction(Rumbl.Repo, [])
     end
 
-    {:ok, conn: Phoenix.ConnTest.conn()}
+    {:ok, conn: Phoenix.ConnTest.conn_case()}
   end
 end
