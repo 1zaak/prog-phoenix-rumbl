@@ -1,7 +1,7 @@
 defmodule Rumbl.VideoControllerTest do
   use Rumbl.ConnCase
 
-  setup %{conn: conn} = config do
+  setup %{conn: conn} = config do    
     if username = config[:login_as] do
       user = insert_user(username: username)
       conn = assign(conn, :current_user, user)
